@@ -104,7 +104,7 @@ const AdminWeeklyDengueDataEditScreen = () => {
         {isLoading ? (
           <p>Loading data...</p>
         ) : error ? (
-          <p>Error loading data: {error.message}</p>
+          <p>Error loading data: {error?.data?.message || error.error}</p>
         ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group controlId="year" className="my-3">

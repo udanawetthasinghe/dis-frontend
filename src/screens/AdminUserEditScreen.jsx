@@ -80,7 +80,7 @@ return (
     </Link>
     <FormContainer>
         <h1>Edit User</h1>
-        {error && <Message variant="danger">{error}</Message>}
+        {error && <Message variant="danger">{error?.data?.message || error.error}</Message>}
         <Form onSubmit={submitHandler}>
           <Form.Group controlId="name" className="my-3">
             <Form.Label>Name</Form.Label>

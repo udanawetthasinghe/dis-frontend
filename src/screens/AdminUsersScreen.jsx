@@ -90,7 +90,7 @@ const [updateUserState] = useUpdateUserDataMutation();
               <Row>
      <h1>Users</h1>
      <h4> Pending Users</h4>
-      {error && <Message variant="danger">{error}</Message>}
+      {error && <Message variant="danger">{error?.data?.message || error.error}</Message>}
       <Table striped hover responsive className="table-sm">
         <thead>
           <tr>
@@ -160,7 +160,7 @@ const [updateUserState] = useUpdateUserDataMutation();
 
 
       <h4> All Users</h4>
-      {error && <Message variant="danger">{error}</Message>}
+      {error && <Message variant="danger">{error?.data?.message || error.error}</Message>}
       <Table striped hover responsive className="table-sm">
         <thead>
           <tr>

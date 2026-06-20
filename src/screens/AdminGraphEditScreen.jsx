@@ -67,7 +67,7 @@ const AdminGraphEditScreen = () => {
         <Col md={10}>
           <h1>Edit Graph</h1>
           {isLoading && <p>Loading graph data...</p>}
-          {error && <p>Error loading graph: {error?.data?.message || error.message}</p>}
+          {error && <p>Error loading graph: {error?.data?.message || error.error}</p>}
 
           {graph && (
             <Form onSubmit={submitHandler}>
