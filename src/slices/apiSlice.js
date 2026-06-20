@@ -1,7 +1,7 @@
 import { fetchBaseQuery, createApi } from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "", // URL managed by proxy setting or manually set
+  baseUrl: import.meta.env.VITE_API_URL || "", // URL managed by proxy setting or manually set
   credentials: "include", // for cookie/session-based auth
 }); 
 
